@@ -81,8 +81,8 @@ services:
     networks:
       - back-tier
     restart: always
-    deploy:
-      mode: global
+#    deploy:
+#      mode: global
 
   grafana:
     image: grafana/grafana
