@@ -9,9 +9,8 @@ networks:
   back-tier:
 
 services:
-
   prometheus:
-    image: prom/prometheus:v2.1.0
+    image: prom/prometheus
     volumes:
       - ./prometheus/:/etc/prometheus/
       - prometheus_data:/prometheus
@@ -76,7 +75,7 @@ services:
       - /:/rootfs:ro
       - /var/run:/var/run:rw
       - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
+#      - /var/lib/docker/:/var/lib/docker:ro
     ports:
       - 8080:8080
     networks:
